@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
   
 Route::any('/validate-member',  'EnrollmentController@validateMember');
+Route::any('/soft-enrollment',  'EnrollmentController@softEnrollment');
