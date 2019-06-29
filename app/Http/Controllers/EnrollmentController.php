@@ -63,10 +63,8 @@ class EnrollmentController extends Controller
             $body = $xml->addChild('soapenv:Body');  
             $body->addChild('status_code', 200);
             $body->addChild('status_description', 'SUCCESS');
-            $body->addChild('accountId', $response->accountId);
-            $body->addChild('accountId', $response->accountId);
-            $body->addChild('loyaltyId', $response->loyaltyId);
-            $body->addChild('accountId', $response->accountId);
+            $body->addChild('accountId', $response->accountId); 
+            $body->addChild('loyaltyId', $response->loyaltyId); 
             $body->addChild('customerId', $response->customerId);
             $body->addChild('mainPointsBalance', $response->mainPointsBalance);
             $body->addChild('mainPointsBalanceInMoney', $response->mainPointsBalanceInMoney);
@@ -169,19 +167,36 @@ class EnrollmentController extends Controller
                 json_encode($data)
             );
             $response = $client->send($response);
-            $response = $response->getBody()->getContents();
-            $response = json_decode($response);
+             
+            if( $response->getStatusCode() == 201 ){
+                $response = $response->getBody()->getContents();
+                $response = json_decode($response);
 
+                // RETURNING A XML TO WINSERVE
+                $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header/></soapenv:Envelope>');
+                //header('Content-Type: text/xml'); 
+                $xml->addAttribute('version', '1.0');
+                $body = $xml->addChild('soapenv:Body');  
+                $body->addChild('status_code', 200);
+                $body->addChild('status_description', 'SUCCESS');
+                $body->addChild('Location',     $response->Location); 
+                $body->addChild('LoyaltyId',    $response->LoyaltyId); 
+                $body->addChild('CustomerId',   $response->CustomerId); 
+                $response = Response::make($xml->asXML(), 200);
+                $response->header('Content-Type', 'application/xml');
+                return $response; 
+            } 
 
         }catch (\GuzzleHttp\Exception\ServerException $e){ 
             $status_code     = $e->getResponse()->getStatusCode();
             $status_description = null;
 
             $response   = $e->getResponse()->getBody()->getContents();
-            $res        =  json_decode($response);  
-
+            $res        =  json_decode($response);   
             if($status_code == 401){
                 $status_description = $res->message;
+            }else if($status_code === 409){
+                $status_description = $res->error_code;
             }else{
                 $status_description = $res->error_code;
             }
@@ -198,6 +213,7 @@ class EnrollmentController extends Controller
             
             //return $res->error_code;
         }catch(\GuzzleHttp\Exception\ClientException $e){
+            
             $status_code        = $e->getResponse()->getStatusCode();
             $status_description = null;
 
@@ -206,6 +222,10 @@ class EnrollmentController extends Controller
 
             if($status_code == 401){
                 $status_description = $res->message;
+            }
+
+            if($status_code === 409){
+                $status_description = $res->error_code;
             }
             
             $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header/></soapenv:Envelope>');
@@ -218,5 +238,6 @@ class EnrollmentController extends Controller
             $response->header('Content-Type', 'application/xml');
             return $response; 
         }
+
     }
 }
