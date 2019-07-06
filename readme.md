@@ -21,30 +21,30 @@ Download and install Laragon -->
 
 Decryption key: mhMZvGgE5gNAysgxzUcvwupi-yhONfxO-TbZjYsop64
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/laragon%20window.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/laragon%20window.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-cd-to-directory.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-cd-to-directory.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-composer-install.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-composer-install.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-copying-env.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-copying-env.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-key-generate.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-key-generate.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-editing-env-for-db-credential.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-editing-env-for-db-credential.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-update-env.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-update-env.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/cmdr-config-cache.png) 
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/cmdr-config-cache.png) 
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/php-sql-driver-dll.png) 
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/php-sql-driver-dll.png) 
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/selecting-sql-driver.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/selecting-sql-driver.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/clicking-settings.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/clicking-settings.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/laragon-auto-startup-config.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/laragon-auto-startup-config.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/laragon-starting-server.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/laragon-starting-server.png)
 
-![alt text](https://github.com/davidgualvez/winserve-client/blob/master/installation/done.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/done.png)
