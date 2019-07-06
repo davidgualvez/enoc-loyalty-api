@@ -1,6 +1,5 @@
-Winserve API Client
+Local Api for Loyalty
 =======================
-
 A api services for winserve application
 
 Requirements
