@@ -39,7 +39,7 @@ Decryption key: mhMZvGgE5gNAysgxzUcvwupi-yhONfxO-TbZjYsop64
 
 ![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/php-sql-driver-dll.png) 
 
-![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/selecting-sql-driver.png)
+![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/selecting-sql-driver.jpg)
 
 ![alt text](https://github.com/davidgualvez/enoc-loyalty-api/blob/master/installation/clicking-settings.png)
 
